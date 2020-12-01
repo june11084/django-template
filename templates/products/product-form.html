@@ -1,0 +1,11 @@
+{% extends 'products/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block body %}
+    <h1>Product form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Save</button>
+    </form>
+{% endblock %}

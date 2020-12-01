@@ -1,0 +1,8 @@
+{% extends 'products/base.html'%}
+{% block body %}
+    <form action="{% url 'delete_product' product.id %}" method="post">
+        {% csrf_token %}
+        <h3>Are you sure that you want to delete {{ product.description }}?</h3>
+        <input type="submit" value="Delete">
+    </form>
+{% endblock %}

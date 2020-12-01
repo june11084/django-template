@@ -1,0 +1,12 @@
+{% extends "tasks/base.html" %}
+{% block body %}
+    <h1>Add Contact</h1>
+    <h1>{{ error }}</h1>
+    <div class="form-group">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+{% endblock %}
